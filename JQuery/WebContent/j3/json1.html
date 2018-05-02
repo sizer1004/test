@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.getJSON('json1.jsp',function(data){
+		//data json데이터   배열변수
+		// j1/test7.jsp 참조
+		// body 추가
+		$.each(data,function(index,item){
+			$('body').append(item.name+":"+item.gender+":"+item.part+"<br>");
+		});
+	});
+});
+</script>
+</head>
+<body>
+<!--  j3/json1.html -->
+</body>
+</html>
+

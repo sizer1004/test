@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$.ajax('xml.jsp',{
+	success:function(data){
+		$(data).find('person').each(function(){
+			var name=$(this).find('name').text();
+			var gender=$(this).find('gender').text();
+			var part=$(this).find('part').text();
+			// body태그 추가  <h1> name : gender : part </h1>
+$('body').append('<h1>'+name+":"+gender+":"+part+"</h1>");
+		});
+	}
+});
+	
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+

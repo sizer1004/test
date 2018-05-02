@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax('string1.jsp',{
+		success:function(data){
+			// body 태그 대상에 뒤부분에  data변수 안에 들어있는 내용 추가 
+			$('body').append(data);
+		}
+	});
+});
+</script>	
+</head>
+<body>
+<!-- j3/string1.html -->
+
+</body>
+</html>
